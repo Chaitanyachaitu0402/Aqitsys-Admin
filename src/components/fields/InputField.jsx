@@ -2,14 +2,18 @@
 import React from "react";
 
 function InputField(props) {
-  const {  variant, state, disabled,label,
+  const {
+    variant,
+    state,
+    disabled,
+    label,
     id,
     type,
     placeholder,
     value,
     onChange,
-    extra, } =
-    props;
+    extra,
+  } = props;
 
   return (
     <div className={`${extra}`}>
@@ -22,16 +26,12 @@ function InputField(props) {
         {label}
       </label>
       <input
-      id={id}
-        type={type}
-        placeholder={placeholder}
-        value={value}            // ✅ IMPORTANT
-        onChange={onChange}      // ✅ IMPORTANT
-        className="mt-2 w-full rounded-xl border p-3"
-        disabled={disabled}
-        type={type}
         id={id}
+        type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
         className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none ${
           disabled === true
             ? "!border-none !bg-gray-100 dark:!bg-white/5 dark:placeholder:!text-[rgba(255,255,255,0.15)]"
